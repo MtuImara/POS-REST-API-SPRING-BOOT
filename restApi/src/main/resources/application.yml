@@ -1,0 +1,28 @@
+server:
+  port: 8085
+  servlet:
+    contextPath: /pos/api
+spring:
+  application:
+    name: POS-REST-API-v1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pos_gescom_bd?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+  main:
+    allow-circular-references: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+main:
+  allow-bean-definition-overriding: 'true'
