@@ -13,4 +13,9 @@ public class UploadFilesDto {
     private Integer id;
     private String nomFichier;
     private String path;
+
+    public UploadFilesDto(String nomFichier, String path) {
+        this.nomFichier = nomFichier;
+        this.path = path;
+    }
 }
